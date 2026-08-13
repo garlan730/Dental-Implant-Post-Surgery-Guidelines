@@ -1,15 +1,16 @@
 [phases.setup]
-nixPkgs = ["php81", "php81Extensions.pdo_mysql", "php81Extensions.mbstring"]
+nixPkgs = ["php81"]
 
 [phases.install]
 cmds = [
-  "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer",
-  "composer install --no-dev --optimize-autoloader"
+  "curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php",
+  "php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer",
+  "chmod +x /usr/local/bin/composer",
+  "/usr/local/bin/composer install --no-dev --optimize-autoloader"
 ]
 
 [phases.build]
 cmds = [
-  "cp .env.example .env || true",
   "php artisan key:generate --no-interaction",
   "php artisan config:cache",
   "php artisan route:cache",
