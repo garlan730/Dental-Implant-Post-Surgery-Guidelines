@@ -122,11 +122,7 @@
 
         /* ===== HERO ===== */
         .hero {
-            background-image: url("{{ asset('img/hero-bg.png') }}");
-            background-size: cover;
-            background-position: center 85%;
-            background-size: 100%;
-            background-repeat: repeat;
+            background: linear-gradient(135deg, #0a2e1f 0%, #14532d 40%, #166534 70%, #16a34a 100%);
             color: var(--white);
             padding: 50px 20px 60px;
             position: relative;
@@ -174,6 +170,10 @@
             border: 3px solid rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(4px);
             animation: floatIcon 4s ease-in-out infinite;
+        }
+        .hero-icon img {
+            width: 80px;
+            border-radius: 50%;
         }
         @keyframes floatIcon {
             0%,
@@ -386,41 +386,6 @@
             font-weight: 700;
             font-size: 1.2rem;
             line-height: 1;
-        }
-
-        /* ===== ILLUSTRATION ROW ===== */
-        .illustration-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0 30px;
-            justify-content: center;
-        }
-        .illustration-card {
-            background: var(--white);
-            border-radius: var(--radius-md);
-            padding: 18px 12px;
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-            flex: 1 1 130px;
-            max-width: 160px;
-            border: 2px solid var(--green-100);
-            transition: var(--transition);
-        }
-        .illustration-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--green-300);
-        }
-        .illustration-card .ill-icon {
-            font-size: 2.8rem;
-            margin-bottom: 8px;
-            display: block;
-        }
-        .illustration-card .ill-label {
-            font-weight: 600;
-            color: var(--green-800);
-            font-size: 0.85rem;
         }
 
         /* ===== DO/DON'T CARDS ===== */
@@ -1181,9 +1146,15 @@
     <!-- ===== HERO ===== -->
     <header class="hero" id="hero">
         <div class="hero-content">
-            <div class="hero-icon"><img src="{{ asset('img/BMC LOGO ONLY.png') }}" style="width: 120px; border-radius: 60px;"></div>
+            <div class="hero-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </div>
             <h1 data-en="Post-Dental Implant Care Guide" data-id="Panduan Perawatan Pasca Implan Gigi">Post-Dental Implant Care Guide</h1>
-            <p class="subtitle" >Klinik Utama Baruga Medical Center</p>
+            <p class="subtitle">Klinik Utama Baruga Medical Center</p>
             <p>Jl. Raya Baruga No.28, Antang, Kec. Manggala,<br>Kota Makassar, Sulawesi Selatan 90234 | admin@barugamedicalcenter.com</p>
             <div class="verified-badge">
                 <span class="check">✔</span>
@@ -1564,93 +1535,79 @@
             <h2 data-en="Book Your Control Appointment" data-id="Buat Janji Kontrol Anda">Book Your Control Appointment</h2>
             <p class="sub" data-en="Schedule your follow-up visit to ensure your implant is healing properly." data-id="Jadwalkan kunjungan tindak lanjut Anda untuk memastikan implan sembuh dengan baik.">Schedule your follow-up visit to ensure your implant is healing properly.</p>
 
-            <!-- Show any validation errors -->
-            @if ($errors->any())
-                <div style="background:#fee2e2; color:#991b1b; border:2px solid #fecaca; border-radius:12px; padding:16px 20px; margin-bottom:20px;">
-                    <strong style="display:block; margin-bottom:6px;">⚠️ Please fix the following errors:</strong>
-                    <ul style="list-style:none; padding-left:0; font-size:0.9rem;">
-                        @foreach ($errors->all() as $error)
-                            <li>• {{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            <!-- Validation errors container -->
+            <div id="formErrors" style="display:none; background:#fee2e2; color:#991b1b; border:2px solid #fecaca; border-radius:12px; padding:16px 20px; margin-bottom:20px;">
+                <strong style="display:block; margin-bottom:6px;">⚠️ Please fix the following errors:</strong>
+                <ul style="list-style:none; padding-left:0; font-size:0.9rem;" id="errorList"></ul>
+            </div>
 
-            <form id="appointmentForm"
-                method="POST"
-                action="{{ route('appointment.store') }}"
-                novalidate>
-                @csrf
+            <form id="appointmentForm" novalidate>
                 <div class="form-grid">
-                    <div class="form-group @error('full_name') error @enderror">
+                    <div class="form-group">
                         <label data-en="Full Name" data-id="Nama Lengkap">Full Name</label>
                         <input
                         type="text"
                         id="fullName"
                         name="full_name"
                         placeholder="John Doe"
-                        value="{{ old('full_name') }}"
                         required
                         >
                         <span class="error-msg" data-en="Please enter your full name" data-id="Mohon masukkan nama lengkap Anda">Please enter your full name</span>
                     </div>
-                    <div class="form-group @error('phone') error @enderror">
+                    <div class="form-group">
                         <label data-en="Phone Number" data-id="Nomor Telepon">Phone Number</label>
                         <input
                         type="tel"
                         id="phone"
                         name="phone"
                         placeholder="+62 812-3456-7890"
-                        value="{{ old('phone') }}"
                         required
                         >
                         <span class="error-msg" data-en="Please enter a valid phone number" data-id="Mohon masukkan nomor telepon yang valid">Please enter a valid phone number</span>
                     </div>
-                    <div class="form-group @error('email') error @enderror">
+                    <div class="form-group">
                         <label data-en="Email Address" data-id="Alamat Email">Email Address</label>
                         <input
                         type="email"
                         id="email"
                         name="email"
                         placeholder="john@example.com"
-                        value="{{ old('email') }}"
                         required
                         >
                         <span class="error-msg" data-en="Please enter a valid email address" data-id="Mohon masukkan alamat email yang valid">Please enter a valid email address</span>
                     </div>
-                    <div class="form-group @error('appointment_date') error @enderror">
+                    <div class="form-group">
                         <label data-en="Preferred Date" data-id="Tanggal yang Diinginkan">Preferred Date</label>
                         <input
                         type="date"
                         id="apptDate"
                         name="appointment_date"
-                        value="{{ old('appointment_date') }}"
                         required
                         >
                         <span class="error-msg" data-en="Please select a date" data-id="Mohon pilih tanggal">Please select a date</span>
                     </div>
-                    <div class="form-group @error('appointment_time') error @enderror">
+                    <div class="form-group">
                         <label data-en="Preferred Time" data-id="Waktu yang Diinginkan">Preferred Time</label>
                         <select id="apptTime" name="appointment_time" required>
                             <option value="" data-en="Select time" data-id="Pilih waktu">Select time</option>
-                            <option value="09:00" {{ old('appointment_time') == '09:00' ? 'selected' : '' }}>09:00 AM</option>
-                            <option value="10:00" {{ old('appointment_time') == '10:00' ? 'selected' : '' }}>10:00 AM</option>
-                            <option value="11:00" {{ old('appointment_time') == '11:00' ? 'selected' : '' }}>11:00 AM</option>
-                            <option value="13:00" {{ old('appointment_time') == '13:00' ? 'selected' : '' }}>01:00 PM</option>
-                            <option value="14:00" {{ old('appointment_time') == '14:00' ? 'selected' : '' }}>02:00 PM</option>
-                            <option value="15:00" {{ old('appointment_time') == '15:00' ? 'selected' : '' }}>03:00 PM</option>
-                            <option value="16:00" {{ old('appointment_time') == '16:00' ? 'selected' : '' }}>04:00 PM</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="13:00">01:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
                         </select>
                         <span class="error-msg" data-en="Please select a time" data-id="Mohon pilih waktu">Please select a time</span>
                     </div>
-                    <div class="form-group @error('appointment_type') error @enderror">
+                    <div class="form-group">
                         <label data-en="Type of Appointment" data-id="Jenis Janji">Type of Appointment</label>
                         <select id="apptType" name="appointment_type" required>
                             <option value="" data-en="Select type" data-id="Pilih jenis">Select type</option>
-                            <option value="suture" {{ old('appointment_type') == 'suture' ? 'selected' : '' }} data-en="Suture Removal" data-id="Pelepasan Jahitan">Suture Removal</option>
-                            <option value="checkup" {{ old('appointment_type') == 'checkup' ? 'selected' : '' }} data-en="Routine Check-up" data-id="Kontrol Rutin">Routine Check-up</option>
-                            <option value="concern" {{ old('appointment_type') == 'concern' ? 'selected' : '' }} data-en="I Have a Concern" data-id="Saya Ada Keluhan">I Have a Concern</option>
-                            <option value="other" {{ old('appointment_type') == 'other' ? 'selected' : '' }} data-en="Other" data-id="Lainnya">Other</option>
+                            <option value="suture" data-en="Suture Removal" data-id="Pelepasan Jahitan">Suture Removal</option>
+                            <option value="checkup" data-en="Routine Check-up" data-id="Kontrol Rutin">Routine Check-up</option>
+                            <option value="concern" data-en="I Have a Concern" data-id="Saya Ada Keluhan">I Have a Concern</option>
+                            <option value="other" data-en="Other" data-id="Lainnya">Other</option>
                         </select>
                         <span class="error-msg" data-en="Please select appointment type" data-id="Mohon pilih jenis janji">Please select appointment type</span>
                     </div>
@@ -1660,18 +1617,16 @@
                         id="notes"
                         name="notes"
                         placeholder="Write any symptoms or questions you have... / Tulis gejala atau pertanyaan Anda..."
-                        >{{ old('notes') }}</textarea>
+                        ></textarea>
                     </div>
                     <button type="submit" class="submit-btn" id="submitBtn">
                         📅 <span data-en="Book Appointment" data-id="Buat Janji">Book Appointment</span>
                     </button>
                 </div>
             </form>
-
-            <!-- Hidden success modal trigger - shown after AJAX success -->
         </section>
 
-        <!-- ===== SUCCESS MODAL (hidden by default) ===== -->
+        <!-- ===== SUCCESS MODAL ===== -->
         <div class="form-success-overlay" id="successOverlay">
             <div class="form-success-modal">
                 <div class="success-icon">✅</div>
@@ -1699,7 +1654,7 @@
 
                 <button class="btn-close-success" onclick="closeSuccessModal()" data-en="Got it!" data-id="Mengerti!">Got it!</button>
                 <br>
-                {{-- <a href="{{ route('appointment.index') }}" class="btn-view-appointments" data-en="View All Appointments" data-id="Lihat Semua Janji">📋 View All Appointments</a> --}}
+                <button class="btn-view-appointments" onclick="closeSuccessModal()" data-en="Close" data-id="Tutup">Close</button>
             </div>
         </div>
 
@@ -1911,74 +1866,124 @@
             updateTimerDisplay();
         }
 
-        // ===== APPOINTMENT FORM SUBMISSION (AJAX with Success Modal) =====
+        // ===== APPOINTMENT FORM SUBMISSION =====
         document.getElementById('appointmentForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
             const form = this;
             const formData = new FormData(form);
             const submitBtn = document.getElementById('submitBtn');
+            const errorContainer = document.getElementById('formErrors');
+            const errorList = document.getElementById('errorList');
 
-            // Disable button to prevent double submission
+            // Reset errors
+            errorContainer.style.display = 'none';
+            errorList.innerHTML = '';
+            document.querySelectorAll('.form-group.error').forEach(el => el.classList.remove('error'));
+
+            // Validate fields
+            let isValid = true;
+            const errors = [];
+
+            const name = document.getElementById('fullName');
+            if (!name.value.trim() || name.value.trim().length < 2) {
+                name.closest('.form-group').classList.add('error');
+                isValid = false;
+                errors.push('Please enter your full name');
+            }
+
+            const phone = document.getElementById('phone');
+            const phoneRegex = /^[0-9+\-\s()]{8,15}$/;
+            if (!phoneRegex.test(phone.value.trim())) {
+                phone.closest('.form-group').classList.add('error');
+                isValid = false;
+                errors.push('Please enter a valid phone number');
+            }
+
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                email.closest('.form-group').classList.add('error');
+                isValid = false;
+                errors.push('Please enter a valid email address');
+            }
+
+            const date = document.getElementById('apptDate');
+            if (!date.value) {
+                date.closest('.form-group').classList.add('error');
+                isValid = false;
+                errors.push('Please select a date');
+            }
+
+            const time = document.getElementById('apptTime');
+            if (!time.value) {
+                time.closest('.form-group').classList.add('error');
+                isValid = false;
+                errors.push('Please select a time');
+            }
+
+            const type = document.getElementById('apptType');
+            if (!type.value) {
+                type.closest('.form-group').classList.add('error');
+                isValid = false;
+                errors.push('Please select appointment type');
+            }
+
+            if (!isValid) {
+                errorContainer.style.display = 'block';
+                errors.forEach(err => {
+                    const li = document.createElement('li');
+                    li.textContent = '• ' + err;
+                    errorList.appendChild(li);
+                });
+                return;
+            }
+
+            // Disable button
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner">⏳</span> Sending...';
 
-            // Clear previous errors
-            document.querySelectorAll('.form-group.error').forEach(el => el.classList.remove('error'));
+            // Simulate API call (replace with actual API endpoint)
+            setTimeout(() => {
+                // Success - show modal
+                showSuccessModal(formData);
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '📅 <span data-en="Book Appointment" data-id="Buat Janji">Book Appointment</span>';
+            }, 1000);
 
-            fetch(form.action, {
+            // Uncomment this when you have a real API endpoint:
+            /*
+            fetch('https://your-api-endpoint.com/appointments', {
                 method: 'POST',
                 body: formData,
                 headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                    'Accept': 'application/json'
                 }
             })
             .then(response => response.json())
             .then(data => {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = '📅 <span data-en="Book Appointment" data-id="Buat Janji">Book Appointment</span>';
-
+                submitBtn.innerHTML = '📅 Book Appointment';
                 if (data.success) {
-                    // Show success modal with details
                     showSuccessModal(formData);
                     form.reset();
                 } else {
-                    // Handle validation errors
-                    if (data.errors) {
-                        for (const [field, messages] of Object.entries(data.errors)) {
-                            const fieldMap = {
-                                'full_name': 'fullName',
-                                'phone': 'phone',
-                                'email': 'email',
-                                'appointment_date': 'apptDate',
-                                'appointment_time': 'apptTime',
-                                'appointment_type': 'apptType'
-                            };
-                            const input = document.getElementById(fieldMap[field]);
-                            if (input) {
-                                input.closest('.form-group').classList.add('error');
-                            }
-                        }
-                        alert('Please fix the errors in the form.');
-                    } else {
-                        alert(data.message || 'An error occurred. Please try again.');
-                    }
+                    alert('Error: ' + (data.message || 'Something went wrong'));
                 }
             })
             .catch(error => {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = '📅 <span data-en="Book Appointment" data-id="Buat Janji">Book Appointment</span>';
-                console.error('Error:', error);
-                alert('Network error. Please check your connection and try again.');
+                submitBtn.innerHTML = '📅 Book Appointment';
+                alert('Network error. Please try again.');
             });
+            */
         });
 
         // ===== SHOW SUCCESS MODAL =====
         function showSuccessModal(formData) {
             const overlay = document.getElementById('successOverlay');
 
-            // Get form values
             const name = formData.get('full_name') || 'N/A';
             const date = formData.get('appointment_date') || 'N/A';
             const time = formData.get('appointment_time') || 'N/A';
@@ -2009,13 +2014,11 @@
             };
             const formattedType = typeMap[type] || type;
 
-            // Update modal details
             document.getElementById('detailName').textContent = name;
             document.getElementById('detailDate').textContent = formattedDate;
             document.getElementById('detailTime').textContent = formattedTime;
             document.getElementById('detailType').textContent = formattedType;
 
-            // Show modal
             overlay.classList.add('show');
             document.body.style.overflow = 'hidden';
         }
@@ -2027,14 +2030,12 @@
             document.body.style.overflow = '';
         }
 
-        // Close modal on overlay click
         document.getElementById('successOverlay').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeSuccessModal();
             }
         });
 
-        // Close modal on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeSuccessModal();
@@ -2053,7 +2054,6 @@
             updateActiveTab();
             updateTimerDisplay();
 
-            // Set default min date for appointment
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('apptDate').setAttribute('min', today);
         }
