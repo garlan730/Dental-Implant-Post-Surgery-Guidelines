@@ -65,6 +65,10 @@
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ],
+
+        "post-install-cmd": [
+        "@php artisan optimize"
         ]
     },
     "extra": {
