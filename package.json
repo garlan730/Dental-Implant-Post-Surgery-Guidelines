@@ -15,5 +15,23 @@
     },
     "optionalDependencies": {
         "@laravel/multiplex": "^0.4.1"
+    },
+
+    "name": "dental-implant-care-guide",
+    "version": "1.0.0",
+    "description": "Post-dental implant care guide with appointment system",
+    "main": "index.js",
+    "scripts": {
+        "build": "echo 'No build step required'"
+    },
+    
+    "dependencies": {},
+    
+    "devDependencies": {},
+    "engines": {
+        "node": ">=16.0.0"
     }
+
+
+
 }
