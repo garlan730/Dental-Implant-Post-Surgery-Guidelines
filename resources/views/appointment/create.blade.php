@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Dental Implant Care Guide | Panduan Perawatan Pasca Implan Gigi</title>
+    <meta name="description" content="Concise post-dental implant care guidelines with interactive tools, verified by official dental sources.">
+    <style>
+        :root {
+            --green-950: #0a2e1f;
+            --green-900: #0d3b2e;
+            --green-800: #14532d;
+            --green-700: #166534;
+            --green-600: #15803d;
+            --green-500: #16a34a;
+            --green-400: #22c55e;
+            --green-300: #4ade80;
+            --green-200: #86efac;
+            --green-100: #bbf7d0;
+            --green-50: #f0fdf4;
+            --white: #ffffff;
+            --off-white: #fafaf5;
+            --text-dark: #111827;
+            --text-medium: #374151;
+            --text-light: #6b7280;
+            --border-light: #e5e7eb;
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --radius-sm: 10px;
+            --radius-md: 18px;
+            --radius-lg: 28px;
+            --radius-xl: 36px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-sans: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: #1A3636;
+            color: var(--white);
+            padding: 6px 0;
+            font-size: 0.85rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 2px solid white;
+        }
+        .top-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .top-bar .hotline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .top-bar .hotline span {
+            color: var(--green-300);
+            font-weight: 700;
+        }
+        .language-switcher {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .lang-btn {
+            padding: 8px 18px;
+            border-radius: 30px;
+            border: 2px solid var(--green-400);
+            background: transparent;
+            color: var(--white);
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: var(--transition);
+            letter-spacing: 0.4px;
+            font-family: var(--font-sans);
+            white-space: nowrap;
+        }
+        .lang-btn:hover {
+            background: rgba(34, 197, 94, 0.2);
+            border-color: var(--green-300);
+            transform: translateY(-1px);
+        }
+        .lang-btn.active {
+            background: var(--green-500);
+            border-color: var(--green-500);
+            color: var(--white);
+            box-shadow: 0 2px 10px rgba(34, 197, 94, 0.4);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background-image: url("{{ asset('img/hero-bg.png') }}");
+            background-size: cover;
+            background-position: center 85%;
+            background-size: 100%;
+            background-repeat: repeat;
+            color: var(--white);
+            padding: 50px 20px 60px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            border-bottom: 6px solid #1A3636;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+            animation: slowPulse 18s ease-in-out infinite;
+            pointer-events: none;
+        }
+        @keyframes slowPulse {
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(1%, -1%) scale(1.05);
+            }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+            animation: floatIcon 4s ease-in-out infinite;
+        }
+        @keyframes floatIcon {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
+            
+        }
+        .hero .subtitle {
+            font-size: clamp(1rem, 3vw, 1.35rem);
+            opacity: 0.92;
+            margin-bottom: 8px;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 22px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        .hero .verified-badge .check {
+            color: var(--green-300);
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        /* ===== NAVIGATION TABS ===== */
+        .nav-tabs {
+            background: var(--white);
+            border-bottom: 2px solid #437373;
+            position: sticky;
+            top: 44px;
+            z-index: 900;
+            box-shadow: var(--shadow-sm);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .nav-tabs::-webkit-scrollbar {
+            display: none;
+        }
+        .nav-tabs-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2px;
+            padding: 0 15px;
+            white-space: nowrap;
+        }
+        .nav-tab {
+            padding: 14px 20px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+            font-family: var(--font-sans);
+            letter-spacing: 0.2px;
+            white-space: nowrap;
+            position: relative;
+        }
+        .nav-tab:hover {
+            color: var(--green-700);
+            background: var(--green-50);
+        }
+        .nav-tab.active {
+            color: var(--green-700);
+            border-bottom-color: var(--green-500);
+            background: var(--green-50);
+        }
+        .nav-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 20%;
+            right: 20%;
+            height: 3px;
+            background: var(--green-500);
+            border-radius: 3px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 50px;
+        }
+        .section {
+            margin-bottom: 50px;
+            scroll-margin-top: 130px;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--green-800);
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.3;
+        }
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            background: var(--green-100);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-xs);
+        }
+        .section-subtitle {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 1rem;
+            max-width: 800px;
+        }
+
+        /* ===== CONCISE CARE BOXES ===== */
+        .care-boxes-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 800px) {
+            .care-boxes-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .care-box {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 25px 20px;
+            box-shadow: var(--shadow-sm);
+            border-top: 6px solid #1A3636;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .care-box:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        .care-box .box-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .care-box .box-header .box-icon {
+            font-size: 2.2rem;
+        }
+        .care-box .box-header .box-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--green-800);
+            margin: 0;
+        }
+        .care-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .care-box ul li {
+            padding: 6px 0;
+            padding-left: 26px;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .care-box ul li:last-child {
+            border-bottom: none;
+        }
+        .care-box ul li::before {
+            content: '•';
+            position: absolute;
+            left: 6px;
+            color: var(--green-500);
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* ===== ILLUSTRATION ROW ===== */
+        .illustration-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0 30px;
+            justify-content: center;
+        }
+        .illustration-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 18px 12px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            flex: 1 1 130px;
+            max-width: 160px;
+            border: 2px solid var(--green-100);
+            transition: var(--transition);
+        }
+        .illustration-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--green-300);
+        }
+        .illustration-card .ill-icon {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .illustration-card .ill-label {
+            font-weight: 600;
+            color: var(--green-800);
+            font-size: 0.85rem;
+        }
+
+        /* ===== DO/DON'T CARDS ===== */
+        .dos-donts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        @media (max-width: 700px) {
+            .dos-donts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .do-card,
+        .dont-card {
+            border-radius: var(--radius-md);
+            padding: 28px 26px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .do-card:hover,
+        .dont-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        .do-card {
+            background: var(--green-50);
+            border: 2px solid var(--green-200);
+        }
+        .dont-card {
+            background: #fff5f5;
+            border: 2px solid #fecaca;
+        }
+        .do-card h3 {
+            color: var(--green-700);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .dont-card h3 {
+            color: #b91c1c;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .do-card ul,
+        .dont-card ul {
+            list-style: none;
+        }
+        .do-card ul li,
+        .dont-card ul li {
+            padding: 8px 0;
+            padding-left: 34px;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .do-card ul li:last-child,
+        .dont-card ul li:last-child {
+            border-bottom: none;
+        }
+        .do-card ul li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            font-size: 1rem;
+        }
+        .dont-card ul li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            font-size: 1rem;
+        }
+
+        /* ===== WARNING SIGNS ===== */
+        .warning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+        .warning-card {
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            padding: 20px 22px;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid #ef4444;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .warning-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        .warning-card .w-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        .warning-card .w-text {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+        .warning-card .w-text strong {
+            color: #b91c1c;
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        /* ===== ORAL HYGIENE STEPS ===== */
+        .hygiene-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .hygiene-step {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 24px 20px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid var(--border-light);
+        }
+        .hygiene-step:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            border-color: var(--green-300);
+        }
+        .hygiene-step .step-number {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 14px;
+            background: var(--green-600);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);
+        }
+        .hygiene-step h4 {
+            color: var(--green-800);
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .hygiene-step p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* ===== INTERACTIVE TOOLS ===== */
+        .interactive-tools {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        @media (max-width: 800px) {
+            .interactive-tools {
+                grid-template-columns: 1fr;
+            }
+        }
+        .tool-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid var(--green-100);
+        }
+        .tool-card h4 {
+            color: var(--green-800);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .progress-tracker {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .progress-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        .progress-item:hover {
+            background: var(--green-50);
+        }
+        .progress-item input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            accent-color: var(--green-500);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .progress-item label {
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            flex: 1;
+        }
+        .progress-item.completed label {
+            text-decoration: line-through;
+            color: var(--text-light);
+        }
+        .progress-summary {
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--green-700);
+            font-size: 0.9rem;
+        }
+        .progress-bar-bg {
+            height: 8px;
+            background: var(--green-100);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--green-500);
+            border-radius: 10px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+
+        .symptom-checker {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .symptom-question {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+        .symptom-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .symptom-btn {
+            padding: 8px 18px;
+            border-radius: 30px;
+            border: 2px solid var(--green-200);
+            background: var(--white);
+            color: var(--green-800);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            font-family: var(--font-sans);
+        }
+        .symptom-btn:hover {
+            background: var(--green-100);
+            border-color: var(--green-400);
+        }
+        .symptom-btn.selected {
+            background: var(--green-500);
+            color: var(--white);
+            border-color: var(--green-500);
+            box-shadow: 0 2px 10px rgba(34, 197, 94, 0.4);
+        }
+        .symptom-result {
+            margin-top: 10px;
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            text-align: center;
+            display: none;
+            animation: fadeInUp 0.4s ease;
+        }
+        .symptom-result.urgent {
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 2px solid #fecaca;
+        }
+        .symptom-result.ok {
+            background: var(--green-100);
+            color: var(--green-800);
+            border: 2px solid var(--green-300);
+        }
+
+        .ice-timer {
+            text-align: center;
+        }
+        .timer-display {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--green-700);
+            margin: 10px 0;
+            letter-spacing: 2px;
+        }
+        .timer-controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .timer-btn {
+            padding: 12px 24px;
+            border-radius: 30px;
+            border: none;
+            background: var(--green-600);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-sans);
+        }
+        .timer-btn:hover {
+            background: var(--green-700);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .timer-btn.secondary {
+            background: var(--white);
+            color: var(--green-700);
+            border: 2px solid var(--green-400);
+        }
+        .timer-btn.secondary:hover {
+            background: var(--green-50);
+            box-shadow: none;
+        }
+
+        /* ===== APPOINTMENT FORM ===== */
+        .appointment-section {
+            background: linear-gradient(135deg, var(--green-50) 0%, var(--white) 50%, var(--green-50) 100%);
+            border-radius: var(--radius-lg);
+            padding: 40px 35px;
+            border: 2px solid var(--green-100);
+            scroll-margin-top: 130px;
+        }
+        .appointment-section h2 {
+            color: var(--green-800);
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .appointment-section .sub {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 650px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            font-weight: 600;
+            color: var(--green-800);
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 13px 16px;
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-family: var(--font-sans);
+            transition: var(--transition);
+            background: var(--white);
+            color: var(--text-dark);
+            outline: none;
+            width: 100%;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--green-500);
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .form-group .error-msg {
+            color: #dc2626;
+            font-size: 0.8rem;
+            display: none;
+        }
+        .form-group.error input,
+        .form-group.error select {
+            border-color: #dc2626;
+            box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+        }
+        .form-group.error .error-msg {
+            display: block;
+        }
+        .submit-btn {
+            grid-column: 1 / -1;
+            padding: 16px 32px;
+            background: var(--green-600);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-sans);
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);
+        }
+        .submit-btn:hover {
+            background: var(--green-700);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
+        }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* ===== SUCCESS MESSAGE ===== */
+        .form-success-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        .form-success-overlay.show {
+            display: flex;
+        }
+        .form-success-modal {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 48px 40px 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            animation: slideUp 0.4s ease;
+            position: relative;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px) scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .form-success-modal .success-icon {
+            font-size: 4rem;
+            background: var(--green-100);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 16px;
+            animation: popIn 0.5s ease;
+        }
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+            }
+            70% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .form-success-modal h3 {
+            font-size: 1.6rem;
+            color: var(--green-800);
+            margin-bottom: 8px;
+        }
+        .form-success-modal p {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .form-success-modal .appointment-details {
+            background: var(--green-50);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            margin: 16px 0 24px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        .form-success-modal .appointment-details strong {
+            color: var(--green-800);
+        }
+        .form-success-modal .appointment-details .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .form-success-modal .appointment-details .detail-row:last-child {
+            border-bottom: none;
+        }
+        .form-success-modal .appointment-details .detail-label {
+            color: var(--text-light);
+        }
+        .form-success-modal .appointment-details .detail-value {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .form-success-modal .btn-close-success {
+            padding: 12px 32px;
+            background: var(--green-600);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-sans);
+        }
+        .form-success-modal .btn-close-success:hover {
+            background: var(--green-700);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);
+        }
+        .form-success-modal .btn-view-appointments {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 24px;
+            background: transparent;
+            color: var(--green-600);
+            border: 2px solid var(--green-200);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-family: var(--font-sans);
+        }
+        .form-success-modal .btn-view-appointments:hover {
+            background: var(--green-50);
+            border-color: var(--green-400);
+        }
+
+        /* ===== MEDICATION NOTE ===== */
+        .medication-note {
+            background: var(--green-900);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            padding: 26px 28px;
+            margin-top: 30px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            box-shadow: var(--shadow-md);
+        }
+        .medication-note .med-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        .medication-note p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            margin-top: 40px;
+            padding: 22px 24px;
+            background: #fffbeb;
+            border: 2px solid #fde68a;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            color: #92400e;
+            line-height: 1.7;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--green-950);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 4px solid var(--green-500);
+        }
+        .footer .sources {
+            max-width: 700px;
+            margin: 15px auto 0;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            line-height: 1.6;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 500px) {
+            .hero {
+                padding: 30px 14px 40px;
+            }
+            .main-content {
+                padding: 20px 14px 35px;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+            .appointment-section {
+                padding: 25px 16px;
+            }
+            .care-boxes-container {
+                grid-template-columns: 1fr;
+            }
+            .nav-tab {
+                padding: 10px 14px;
+                font-size: 0.78rem;
+            }
+            .top-bar-inner {
+                flex-direction: column;
+                gap: 6px;
+                padding: 6px 12px;
+            }
+            .form-success-modal {
+                padding: 32px 20px 28px;
+            }
+            .form-success-modal h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media print {
+            .top-bar,
+            .nav-tabs,
+            .submit-btn,
+            .footer,
+            .interactive-tools,
+            .progress-tracker,
+            .symptom-checker,
+            .timer-controls,
+            .form-success-overlay {
+                display: none !important;
+            }
+            body {
+                background: white;
+            }
+            .hero {
+                padding: 20px;
+                background: var(--green-800) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .main-content {
+                padding: 10px;
+            }
+            .care-box,
+            .do-card,
+            .dont-card,
+            .warning-card,
+            .hygiene-step,
+            .illustration-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="hotline">
+                📞 <span data-en="WhatsApp:" data-id="WhatsApp:">WhatsApp:</span> +62 877-8231-9329
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" id="btnEn" onclick="setLanguage('en')" title="English">🇬🇧 English</button>
+                <button class="lang-btn" id="btnId" onclick="setLanguage('id')" title="Bahasa Indonesia">🇮🇩 Bahasa Indonesia</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-icon"><img src="{{ asset('img/BMC LOGO ONLY.png') }}" style="width: 120px; border-radius: 60px;"></div>
+            <h1 data-en="Post-Dental Implant Care Guide" data-id="Panduan Perawatan Pasca Implan Gigi">Post-Dental Implant Care Guide</h1>
+            <p class="subtitle" >Klinik Utama Baruga Medical Center</p>
+            <p>Jl. Raya Baruga No.28, Antang, Kec. Manggala,<br>Kota Makassar, Sulawesi Selatan 90234 | admin@barugamedicalcenter.com</p>
+            <div class="verified-badge">
+                <span class="check">✔</span>
+                <span data-en="Your complete recovery roadmap for a successful implant journey." data-id="Panduan lengkap untuk membantu Anda menjalani masa pemulihan setelah pemasangan implan.">Your complete recovery roadmap for a successful implant journey.</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== NAVIGATION TABS ===== -->
+    <nav class="nav-tabs" id="navTabs">
+        <div class="nav-tabs-inner">
+            <button class="nav-tab active" data-target="immediate" data-en="First 24 Hours" data-id="24 Jam Pertama">First 24 Hours</button>
+            <button class="nav-tab" data-target="recovery" data-en="Days 1–3" data-id="Hari 1–3">Days 1–3</button>
+            <button class="nav-tab" data-target="week1" data-en="Week 1–2" data-id="Minggu 1–2">Week 1–2</button>
+            <button class="nav-tab" data-target="longterm" data-en="Long-Term Care" data-id="Perawatan Jangka Panjang">Long-Term Care</button>
+            <button class="nav-tab" data-target="dosdonts" data-en="Do's & Don'ts" data-id="Boleh & Tidak">Do's & Don'ts</button>
+            <button class="nav-tab" data-target="warnings" data-en="Warning Signs" data-id="Tanda Bahaya">Warning Signs</button>
+            <button class="nav-tab" data-target="interactive" data-en="Interactive Tools" data-id="Alat Interaktif">Interactive Tools</button>
+            <button class="nav-tab" data-target="appointment" data-en="Book Appointment" data-id="Buat Janji">Book Appointment</button>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+
+        <!-- ===== SECTION 1: FIRST 24 HOURS ===== -->
+        <section class="section" id="immediate">
+            <h2 class="section-title">
+                <span class="icon">⏰</span>
+                <span data-en="The First 24 Hours" data-id="24 Jam Pertama">The First 24 Hours</span>
+            </h2>
+            <p class="section-subtitle" data-en="Most important actions immediately after surgery." data-id="Tindakan terpenting segera setelah operasi.">Most important actions immediately after surgery.</p>
+
+            <div class="care-boxes-container">
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">🩸</span>
+                        <h3 class="box-title" data-en="Bleeding Control" data-id="Kontrol Pendarahan">Bleeding Control</h3>
+                    </div>
+                    <ul>
+                        <li data-en="Bite on gauze 30–45 min" data-id="Gigit kain kasa selama 30–45 menit">Bite on gauze 30–45 min</li>
+                        <li data-en="Replace if bleeding continues" data-id="Ganti jika pendarahan berlanjut">Replace if bleeding continues</li>
+                        <li data-en="Minor oozing is normal" data-id="Pendarahan ringan masih normal">Minor oozing is normal</li>
+                    </ul>
+                </div>
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">💊</span>
+                        <h3 class="box-title" data-en="Medication" data-id="Obat-obatan">Medication</h3>
+                    </div>
+                    <ul>
+                        <li data-en="Take prescribed pain meds" data-id="Minum obat pereda nyeri sesuai resep">Take prescribed pain meds</li>
+                        <li data-en="Finish all antibiotics" data-id="Habiskan semua antibiotik">Finish all antibiotics</li>
+                        <li data-en="Avoid aspirin" data-id="Hindari aspirin">Avoid aspirin</li>
+                    </ul>
+                </div>
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">🧊</span>
+                        <h3 class="box-title" data-en="Swelling & Diet" data-id="Bengkak & Diet">Swelling & Diet</h3>
+                    </div>
+                    <ul>
+                        <li data-en="Ice packs 15 min on/off" data-id="Kompres es selama 15 menit, lalu lepaskan selama 15 menit">Ice packs 15 min on/off</li>
+                        <li data-en="Eat cold, soft foods" data-id="Makan makanan dingin & lembut">Eat cold, soft foods</li>
+                        <li data-en="No straws, no hot liquids" data-id="Hindari penggunaan sedotan dan minuman panas">No straws, no hot liquids</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: DAYS 1-3 ===== -->
+        <section class="section" id="recovery">
+            <h2 class="section-title">
+                <span class="icon">🌱</span>
+                <span data-en="Days 1 – 3: Early Recovery" data-id="Hari 1 – 3: Masa Pemulihan Awal">Days 1 – 3: Early Recovery</span>
+            </h2>
+            <p class="section-subtitle" data-en="Keep it simple – focus on gentle care." data-id="Tetap sederhana – fokus pada perawatan yang lembut.">Keep it simple – focus on gentle care.</p>
+            <div class="care-boxes-container">
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">🧂</span>
+                        <h3 class="box-title" data-en="Saline Rinses" data-id="Kumur Air Garam">Saline Rinses</h3>
+                    </div>
+                    <ul>
+                        <li data-en="½ tsp salt in warm water" data-id="½ sdt garam dalam air hangat">½ tsp salt in warm water</li>
+                        <li data-en="Rinse 3–4x daily" data-id="Berkumur 3–4 kali sehari">Rinse 3–4x daily</li>
+                        <li data-en="Do not swish hard" data-id="Jangan berkumur keras">Do not swish hard</li>
+                    </ul>
+                </div>
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">🪥</span>
+                        <h3 class="box-title" data-en="Oral Hygiene" data-id="Kebersihan Mulut">Oral Hygiene</h3>
+                    </div>
+                    <ul>
+                        <li data-en="Brush gently, avoid surgical site" data-id="Sikat lembut, hindari area operasi">Brush gently, avoid surgical site</li>
+                        <li data-en="Use soft-bristled brush" data-id="Gunakan sikat bulu lembut">Use soft-bristled brush</li>
+                        <li data-en="No flossing near implant" data-id="Hindari menggunakan benang gigi di sekitar implan">No flossing near implant</li>
+                    </ul>
+                </div>
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">🍲</span>
+                        <h3 class="box-title" data-en="Diet" data-id="Diet">Diet</h3>
+                    </div>
+                    <ul>
+                        <li data-en="Semi-soft foods (eggs, soup)" data-id="Makanan bertekstur lunak (telur, sup)">Semi-soft foods (eggs, soup)</li>
+                        <li data-en="Avoid hot/spicy/crunchy" data-id="Hindari makanan panas, pedas, atau renyah">Avoid hot/spicy/crunchy</li>
+                        <li data-en="Chew on opposite side" data-id="Kunyah di sisi berlawanan">Chew on opposite side</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 3: WEEK 1-2 ===== -->
+        <section class="section" id="week1">
+            <h2 class="section-title">
+                <span class="icon">📅</span>
+                <span data-en="Week 1 – 2: Continued Healing" data-id="Minggu 1 – 2: Penyembuhan Berlanjut">Week 1 – 2: Continued Healing</span>
+            </h2>
+            <p class="section-subtitle" data-en="Gradually return to normal, but stay cautious." data-id="Kembali ke aktivitas normal secara bertahap, tetapi tetap berhati-hati.">Gradually return to normal, but stay cautious.</p>
+            <div class="care-boxes-container">
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">🩹</span>
+                        <h3 class="box-title" data-en="Follow-up" data-id="Kontrol">Follow-up</h3>
+                    </div>
+                    <ul>
+                        <li data-en="Attend suture removal" data-id="Hadiri pelepasan jahitan">Attend suture removal</li>
+                        <li data-en="Dentist checks healing" data-id="Dokter periksa penyembuhan">Dentist checks healing</li>
+                        <li data-en="Continue saline rinses" data-id="Lanjutkan kumur air garam">Continue saline rinses</li>
+                    </ul>
+                </div>
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">🥗</span>
+                        <h3 class="box-title" data-en="Diet & Hygiene" data-id="Diet & Kebersihan">Diet & Hygiene</h3>
+                    </div>
+                    <ul>
+                        <li data-en="Reintroduce firmer foods slowly" data-id="Mulai kembali mengonsumsi makanan yang lebih padat secara bertahap">Reintroduce firmer foods slowly</li>
+                        <li data-en="Resume full brushing with soft brush" data-id="Kembali menyikat gigi secara menyeluruh dengan sikat berbulu lembut">Resume full brushing with soft brush</li>
+                        <li data-en="Avoid hard/crunchy on implant side" data-id="Hindari makanan keras atau renyah di sisi implan">Avoid hard/crunchy on implant side</li>
+                    </ul>
+                </div>
+                <div class="care-box">
+                    <div class="box-header">
+                        <span class="box-icon">⚠️</span>
+                        <h3 class="box-title" data-en="Still Avoid" data-id="Masih Hindari">Still Avoid</h3>
+                    </div>
+                    <ul>
+                        <li data-en="Smoking / tobacco" data-id="Merokok / produk tembakau">Smoking / tobacco</li>
+                        <li data-en="Straws" data-id="Sedotan">Straws</li>
+                        <li data-en="Strenuous exercise" data-id="Aktivitas fisik berat">Strenuous exercise</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 4: LONG-TERM ===== -->
+        <section class="section" id="longterm">
+            <h2 class="section-title">
+                <span class="icon">🔄</span>
+                <span data-en="Long-Term Care & Maintenance" data-id="Perawatan & Pemeliharaan Jangka Panjang">Long-Term Care & Maintenance</span>
+            </h2>
+            <p class="section-subtitle" data-en="Your dental implant can last a lifetime with proper care." data-id="Implan gigi Anda dapat bertahan seumur hidup dengan perawatan yang tepat.">Your dental implant can last a lifetime with proper care.</p>
+            <div class="hygiene-steps">
+                <div class="hygiene-step">
+                    <div class="step-number">1</div>
+                    <h4 data-en="Daily Brushing" data-id="Menyikat Gigi Setiap Hari">Daily Brushing</h4>
+                    <p data-en="Brush twice daily with a soft-bristled brush and fluoride toothpaste" data-id="Sikat dua kali sehari dengan sikat berbulu lembut dan pasta gigi berfluoride">Brush twice daily with a soft-bristled brush and fluoride toothpaste</p>
+                </div>
+                <div class="hygiene-step">
+                    <div class="step-number">2</div>
+                    <h4 data-en="Interdental Cleaning" data-id="Membersihkan Sela-sela Gigi">Interdental Cleaning</h4>
+                    <p data-en="Use floss, interdental brushes, or water flossers daily around the implant" data-id="Gunakan benang gigi, sikat interdental, atau water flosser setiap hari di sekitar implan">Use floss, interdental brushes, or water flossers daily around the implant</p>
+                </div>
+                <div class="hygiene-step">
+                    <div class="step-number">3</div>
+                    <h4 data-en="Regular Dental Visits" data-id="KKontrol Gigi Secara Rutin">Regular Dental Visits</h4>
+                    <p data-en="Schedule professional cleanings and check-ups every 6 months" data-id="Jadwalkan pembersihan profesional dan pemeriksaan setiap 6 bulan">Schedule professional cleanings and check-ups every 6 months</p>
+                </div>
+                <div class="hygiene-step">
+                    <div class="step-number">4</div>
+                    <h4 data-en="Avoid Harmful Habits" data-id="Hindari Kebiasaan yang Dapat Merusak Implan">Avoid Harmful Habits</h4>
+                    <p data-en="No smoking, no chewing ice/hard objects, no using teeth as tools" data-id="Jangan merokok, jangan mengunyah es/benda keras, jangan pakai gigi sebagai alat">No smoking, no chewing ice/hard objects, no using teeth as tools</p>
+                </div>
+                <div class="hygiene-step">
+                    <div class="step-number">5</div>
+                    <h4 data-en="Wear a Night Guard" data-id="Gunakan Pelindung Gigi Saat Tidur">Wear a Night Guard</h4>
+                    <p data-en="If you grind your teeth (bruxism), use a custom night guard" data-id="Jika Anda menggertakkan gigi (bruxism), gunakan pelindung malam khusus">If you grind your teeth (bruxism), use a custom night guard</p>
+                </div>
+                <div class="hygiene-step">
+                    <div class="step-number">6</div>
+                    <h4 data-en="Healthy Lifestyle" data-id="Menjaga Pola Hidup Sehat">Healthy Lifestyle</h4>
+                    <p data-en="Maintain a balanced diet rich in calcium and vitamin D" data-id="Jaga pola makan seimbang kaya kalsium dan vitamin D">Maintain a balanced diet rich in calcium and vitamin D</p>
+                </div>
+            </div>
+
+            <div class="medication-note">
+                <div class="med-icon">💊</div>
+                <div>
+                    <p data-en="<strong>Important:</strong> Smokers have a significantly higher risk of implant failure. Consider quitting or reducing during the healing period." data-id="<strong>Penting:</strong> Merokok dapat meningkatkan risiko kegagalan implan secara signifikan. Pertimbangkan berhenti atau mengurangi selama masa penyembuhan."><strong>Important:</strong> Smokers have a significantly higher risk of implant failure. Consider quitting or reducing during the healing period.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: DO'S AND DON'TS ===== -->
+        <section class="section" id="dosdonts">
+            <h2 class="section-title">
+                <span class="icon">📋</span>
+                <span data-en="Do's & Don'ts — Quick Reference" data-id="Yang Boleh & Tidak Boleh Dilakukan — Panduan Singkat">Do's & Don'ts — Quick Reference</span>
+            </h2>
+            <p class="section-subtitle" data-en="Print this page or take a screenshot for easy reference." data-id="Cetak halaman ini atau ambil tangkapan layar untuk referensi mudah.">Print this page or take a screenshot for easy reference.</p>
+            <div class="dos-donts-grid">
+                <div class="do-card">
+                    <h3>✅ <span data-en="DO" data-id="BOLEH">DO</span></h3>
+                    <ul>
+                        <li data-en="Apply ice packs for the first 24 hours (15 min on/off)" data-id="Kompres es selama 24 jam pertama (15 menit nyala/mati)">Apply ice packs for the first 24 hours (15 min on/off)</li>
+                        <li data-en="Take all prescribed medications as directed" data-id="Minum semua obat yang diresepkan sesuai petunjuk">Take all prescribed medications as directed</li>
+                        <li data-en="Eat soft, cold foods in the first 24 hours" data-id="Makan makanan lembut dan dingin dalam 24 jam pertama">Eat soft, cold foods in the first 24 hours</li>
+                        <li data-en="Keep your head elevated when resting" data-id="Posisikan kepala lebih tinggi saat beristirahat">Keep your head elevated when resting</li>
+                        <li data-en="Rinse gently with warm salt water after 24 hours" data-id="Kumur perlahan dengan air garam hangat setelah 24 jam">Rinse gently with warm salt water after 24 hours</li>
+                        <li data-en="Maintain good oral hygiene around the implant" data-id="Jaga kebersihan mulut yang baik di sekitar implan">Maintain good oral hygiene around the implant</li>
+                        <li data-en="Attend all scheduled follow-up appointments" data-id="Hadiri semua janji kontrol yang dijadwalkan">Attend all scheduled follow-up appointments</li>
+                        <li data-en="Drink plenty of water" data-id="Minumlah air yang cukup">Drink plenty of water</li>
+                    </ul>
+                </div>
+                <div class="dont-card">
+                    <h3>❌ <span data-en="DON'T" data-id="JANGAN">DON'T</span></h3>
+                    <ul>
+                        <li data-en="Do NOT use straws for at least 1 week" data-id="JANGAN gunakan sedotan selama minimal 1 minggu">Do NOT use straws for at least 1 week</li>
+                        <li data-en="Do NOT smoke or use tobacco products" data-id="JANGAN merokok atau gunakan produk tembakau">Do NOT smoke or use tobacco products</li>
+                        <li data-en="Do NOT consume hot foods/beverages in first 24 hours" data-id="JANGAN konsumsi makanan/minuman panas dalam 24 jam pertama">Do NOT consume hot foods/beverages in first 24 hours</li>
+                        <li data-en="Do NOT spit forcefully or swish vigorously" data-id="JANGAN meludah keras atau berkumur dengan kuat">Do NOT spit forcefully or swish vigorously</li>
+                        <li data-en="Do NOT touch the surgical site with fingers or tongue" data-id="JANGAN sentuh area operasi dengan jari atau lidah">Do NOT touch the surgical site with fingers or tongue</li>
+                        <li data-en="Do NOT engage in strenuous exercise for 48–72 hours" data-id="JANGAN olahraga berat selama 48–72 jam">Do NOT engage in strenuous exercise for 48–72 hours</li>
+                        <li data-en="Do NOT drink alcohol for at least 72 hours" data-id="JANGAN minum alkohol minimal 72 jam">Do NOT drink alcohol for at least 72 hours</li>
+                        <li data-en="Do NOT brush the surgical site directly until cleared" data-id="JANGAN menyikat area operasi langsung sampai diizinkan">Do NOT brush the surgical site directly until cleared</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: WARNING SIGNS ===== -->
+        <section class="section" id="warnings">
+            <h2 class="section-title">
+                <span class="icon">⚠️</span>
+                <span data-en="When to Contact Your Dentist Immediately" data-id="Kapan Harus Segera Menghubungi Dokter Gigi Anda">When to Contact Your Dentist Immediately</span>
+            </h2>
+            <p class="section-subtitle" data-en="These symptoms may indicate complications that require prompt professional attention." data-id="Gejala-gejala ini mungkin mengindikasikan komplikasi yang memerlukan penanganan profesional segera.">These symptoms may indicate complications that require prompt professional attention.</p>
+            <div class="warning-grid">
+                <div class="warning-card">
+                    <span class="w-icon">🩸</span>
+                    <div class="w-text">
+                        <strong data-en="Excessive Bleeding" data-id="Pendarahan Berlebihan">Excessive Bleeding</strong>
+                        <span data-en="Bleeding that doesn't stop after 4+ hours of gauze pressure" data-id="Pendarahan yang tidak berhenti setelah 4+ jam tekanan kain kasa">Bleeding that doesn't stop after 4+ hours of gauze pressure</span>
+                    </div>
+                </div>
+                <div class="warning-card">
+                    <span class="w-icon">🤒</span>
+                    <div class="w-text">
+                        <strong data-en="Fever" data-id="Demam">Fever</strong>
+                        <span data-en="Temperature above 38°C (100.4°F) lasting more than 24 hours" data-id="Suhu di atas 38°C (100.4°F) bertahan lebih dari 24 jam">Temperature above 38°C (100.4°F) lasting more than 24 hours</span>
+                    </div>
+                </div>
+                <div class="warning-card">
+                    <span class="w-icon">😣</span>
+                    <div class="w-text">
+                        <strong data-en="Severe Pain" data-id="Nyeri Hebat">Severe Pain</strong>
+                        <span data-en="Pain that worsens after 48 hours or isn't relieved by medication" data-id="Nyeri yang memburuk setelah 48 jam atau tidak mereda dengan obat">Pain that worsens after 48 hours or isn't relieved by medication</span>
+                    </div>
+                </div>
+                <div class="warning-card">
+                    <span class="w-icon">💛</span>
+                    <div class="w-text">
+                        <strong data-en="Pus or Discharge" data-id="Nanah atau Cairan">Pus or Discharge</strong>
+                        <span data-en="Any yellowish/white discharge or bad taste from the implant site" data-id="Cairan berwarna kekuningan/putih atau rasa tidak enak dari area implan">Any yellowish/white discharge or bad taste from the implant site</span>
+                    </div>
+                </div>
+                <div class="warning-card">
+                    <span class="w-icon">😮</span>
+                    <div class="w-text">
+                        <strong data-en="Implant Feels Loose" data-id="Implan Terasa Longgar">Implant Feels Loose</strong>
+                        <span data-en="Any movement or looseness of the implant fixture" data-id="Implan terasa bergerak atau longgar">Any movement or looseness of the implant fixture</span>
+                    </div>
+                </div>
+                <div class="warning-card">
+                    <span class="w-icon">😵</span>
+                    <div class="w-text">
+                        <strong data-en="Allergic Reaction" data-id="Reaksi Alergi">Allergic Reaction</strong>
+                        <span data-en="Rash, hives, difficulty breathing, or facial swelling beyond normal" data-id="Ruam, biduran, sulit bernapas, atau pembengkakan wajah di luar normal">Rash, hives, difficulty breathing, or facial swelling beyond normal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 7: INTERACTIVE TOOLS ===== -->
+        <section class="section" id="interactive">
+            <h2 class="section-title">
+                <span class="icon">🛠️</span>
+                <span data-en="Interactive Tools & Trackers" data-id="Alat Pemantauan">Interactive Tools & Trackers</span>
+            </h2>
+            <p class="section-subtitle" data-en="Stay on track with your recovery using these helpful tools." data-id="Tetap pantau pemulihan Anda dengan alat bantu ini.">Stay on track with your recovery using these helpful tools.</p>
+            <div class="interactive-tools">
+                <!-- Healing Progress Tracker -->
+                <div class="tool-card">
+                    <h4>📊 <span data-en="Healing Progress Tracker" data-id="Pemantauan Kemajuan Penyembuhan">Healing Progress Tracker</span></h4>
+                    <div class="progress-tracker" id="progressTracker">
+                        <div class="progress-item">
+                            <input type="checkbox" id="chk1">
+                            <label for="chk1" data-en="Day 1: Applied ice packs every 15 min" data-id="Hari 1: Kompres es selama 15 menit secara berkala">Day 1: Applied ice packs every 15 min</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="chk2">
+                            <label for="chk2" data-en="Day 2: Took all medications on time" data-id="Hari 2: Minum semua obat sesuai jadwal">Day 2: Took all medications on time</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="chk3">
+                            <label for="chk3" data-en="Day 3: Started warm saline rinses" data-id="Hari 3: Mulai berkumur dengan air garam hangat">Day 3: Started warm saline rinses</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="chk4">
+                            <label for="chk4" data-en="Day 4: Began gentle brushing away from implant" data-id="Hari 4: Mulai menyikat lembut menjauhi implan">Day 4: Began gentle brushing away from implant</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="chk5">
+                            <label for="chk5" data-en="Week 1: Attended suture removal" data-id="Minggu 1: Menjalani kontrol dan pelepasan jahitan">Week 1: Attended suture removal</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="chk6">
+                            <label for="chk6" data-en="Week 2: Resumed normal diet" data-id="Minggu 2: Kembali ke pola makan seperti biasa">Week 2: Resumed normal diet</label>
+                        </div>
+                    </div>
+                    <div class="progress-summary" id="progressSummary">0/6 <span data-en="completed" data-id="selesai">completed</span></div>
+                    <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+                </div>
+
+                <!-- Symptom Checker -->
+                <div class="tool-card">
+                    <h4>🩺 <span data-en="Symptom Checker" data-id="Pemeriksa Gejala">Symptom Checker</span></h4>
+                    <div class="symptom-checker">
+                        <div class="symptom-question" data-en="Do you have severe bleeding that won't stop?" data-id="Apakah Anda mengalami pendarahan hebat yang tidak berhenti?">Do you have severe bleeding that won't stop?</div>
+                        <div class="symptom-options">
+                            <button class="symptom-btn" onclick="checkSymptom('bleeding','yes')" data-en="Yes" data-id="Ya">Yes</button>
+                            <button class="symptom-btn" onclick="checkSymptom('bleeding','no')" data-en="No" data-id="Tidak">No</button>
+                        </div>
+                        <div class="symptom-question" data-en="Is the pain worsening after 48 hours?" data-id="Apakah nyeri memburuk setelah 48 jam?">Is the pain worsening after 48 hours?</div>
+                        <div class="symptom-options">
+                            <button class="symptom-btn" onclick="checkSymptom('pain','yes')" data-en="Yes" data-id="Ya">Yes</button>
+                            <button class="symptom-btn" onclick="checkSymptom('pain','no')" data-en="No" data-id="Tidak">No</button>
+                        </div>
+                        <div class="symptom-question" data-en="Do you notice pus or bad taste from the site?" data-id="Apakah Anda melihat nanah atau rasa tidak enak dari area implan?">Do you notice pus or bad taste from the site?</div>
+                        <div class="symptom-options">
+                            <button class="symptom-btn" onclick="checkSymptom('pus','yes')" data-en="Yes" data-id="Ya">Yes</button>
+                            <button class="symptom-btn" onclick="checkSymptom('pus','no')" data-en="No" data-id="Tidak">No</button>
+                        </div>
+                        <div class="symptom-result" id="symptomResult"></div>
+                    </div>
+                </div>
+
+                <!-- Ice Pack Timer -->
+                <div class="tool-card">
+                    <h4>⏱️ <span data-en="Ice Pack Timer" data-id="Timer Kompres Es">Ice Pack Timer</span></h4>
+                    <div class="ice-timer">
+                        <div class="timer-display" id="timerDisplay">15:00</div>
+                        <div class="timer-controls">
+                            <button class="timer-btn" id="startTimerBtn" onclick="startIceTimer()" data-en="Start 15 min" data-id="Mulai 15 menit">Start 15 min</button>
+                            <button class="timer-btn secondary" id="resetTimerBtn" onclick="resetIceTimer()" data-en="Reset" data-id="Atur Ulang">Reset</button>
+                        </div>
+                        <p style="margin-top:10px; font-size:0.85rem; color:var(--text-light);" data-en="Use during the first 24 hours only. Cycle 15 min on, 15 min off." data-id="Digunakan hanya selama 24 jam pertama. Kompres selama 15 menit, kemudian lepaskan selama 15 menit sebelum mengulanginya.">Use during the first 24 hours only. Cycle 15 min on, 15 min off.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 8: APPOINTMENT BOOKING ===== -->
+        <section class="appointment-section" id="appointment">
+            <h2 data-en="Book Your Control Appointment" data-id="Buat Janji Kontrol Anda">Book Your Control Appointment</h2>
+            <p class="sub" data-en="Schedule your follow-up visit to ensure your implant is healing properly." data-id="Jadwalkan kunjungan tindak lanjut Anda untuk memastikan implan sembuh dengan baik.">Schedule your follow-up visit to ensure your implant is healing properly.</p>
+
+            <!-- Show any validation errors -->
+            @if ($errors->any())
+                <div style="background:#fee2e2; color:#991b1b; border:2px solid #fecaca; border-radius:12px; padding:16px 20px; margin-bottom:20px;">
+                    <strong style="display:block; margin-bottom:6px;">⚠️ Please fix the following errors:</strong>
+                    <ul style="list-style:none; padding-left:0; font-size:0.9rem;">
+                        @foreach ($errors->all() as $error)
+                            <li>• {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form id="appointmentForm"
+                method="POST"
+                action="{{ route('appointment.store') }}"
+                novalidate>
+                @csrf
+                <div class="form-grid">
+                    <div class="form-group @error('full_name') error @enderror">
+                        <label data-en="Full Name" data-id="Nama Lengkap">Full Name</label>
+                        <input
+                        type="text"
+                        id="fullName"
+                        name="full_name"
+                        placeholder="John Doe"
+                        value="{{ old('full_name') }}"
+                        required
+                        >
+                        <span class="error-msg" data-en="Please enter your full name" data-id="Mohon masukkan nama lengkap Anda">Please enter your full name</span>
+                    </div>
+                    <div class="form-group @error('phone') error @enderror">
+                        <label data-en="Phone Number" data-id="Nomor Telepon">Phone Number</label>
+                        <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+62 812-3456-7890"
+                        value="{{ old('phone') }}"
+                        required
+                        >
+                        <span class="error-msg" data-en="Please enter a valid phone number" data-id="Mohon masukkan nomor telepon yang valid">Please enter a valid phone number</span>
+                    </div>
+                    <div class="form-group @error('email') error @enderror">
+                        <label data-en="Email Address" data-id="Alamat Email">Email Address</label>
+                        <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="john@example.com"
+                        value="{{ old('email') }}"
+                        required
+                        >
+                        <span class="error-msg" data-en="Please enter a valid email address" data-id="Mohon masukkan alamat email yang valid">Please enter a valid email address</span>
+                    </div>
+                    <div class="form-group @error('appointment_date') error @enderror">
+                        <label data-en="Preferred Date" data-id="Tanggal yang Diinginkan">Preferred Date</label>
+                        <input
+                        type="date"
+                        id="apptDate"
+                        name="appointment_date"
+                        value="{{ old('appointment_date') }}"
+                        required
+                        >
+                        <span class="error-msg" data-en="Please select a date" data-id="Mohon pilih tanggal">Please select a date</span>
+                    </div>
+                    <div class="form-group @error('appointment_time') error @enderror">
+                        <label data-en="Preferred Time" data-id="Waktu yang Diinginkan">Preferred Time</label>
+                        <select id="apptTime" name="appointment_time" required>
+                            <option value="" data-en="Select time" data-id="Pilih waktu">Select time</option>
+                            <option value="09:00" {{ old('appointment_time') == '09:00' ? 'selected' : '' }}>09:00 AM</option>
+                            <option value="10:00" {{ old('appointment_time') == '10:00' ? 'selected' : '' }}>10:00 AM</option>
+                            <option value="11:00" {{ old('appointment_time') == '11:00' ? 'selected' : '' }}>11:00 AM</option>
+                            <option value="13:00" {{ old('appointment_time') == '13:00' ? 'selected' : '' }}>01:00 PM</option>
+                            <option value="14:00" {{ old('appointment_time') == '14:00' ? 'selected' : '' }}>02:00 PM</option>
+                            <option value="15:00" {{ old('appointment_time') == '15:00' ? 'selected' : '' }}>03:00 PM</option>
+                            <option value="16:00" {{ old('appointment_time') == '16:00' ? 'selected' : '' }}>04:00 PM</option>
+                        </select>
+                        <span class="error-msg" data-en="Please select a time" data-id="Mohon pilih waktu">Please select a time</span>
+                    </div>
+                    <div class="form-group @error('appointment_type') error @enderror">
+                        <label data-en="Type of Appointment" data-id="Jenis Janji">Type of Appointment</label>
+                        <select id="apptType" name="appointment_type" required>
+                            <option value="" data-en="Select type" data-id="Pilih jenis">Select type</option>
+                            <option value="suture" {{ old('appointment_type') == 'suture' ? 'selected' : '' }} data-en="Suture Removal" data-id="Pelepasan Jahitan">Suture Removal</option>
+                            <option value="checkup" {{ old('appointment_type') == 'checkup' ? 'selected' : '' }} data-en="Routine Check-up" data-id="Kontrol Rutin">Routine Check-up</option>
+                            <option value="concern" {{ old('appointment_type') == 'concern' ? 'selected' : '' }} data-en="I Have a Concern" data-id="Saya Ada Keluhan">I Have a Concern</option>
+                            <option value="other" {{ old('appointment_type') == 'other' ? 'selected' : '' }} data-en="Other" data-id="Lainnya">Other</option>
+                        </select>
+                        <span class="error-msg" data-en="Please select appointment type" data-id="Mohon pilih jenis janji">Please select appointment type</span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label data-en="Additional Notes (optional)" data-id="Catatan Tambahan (opsional)">Additional Notes (optional)</label>
+                        <textarea
+                        id="notes"
+                        name="notes"
+                        placeholder="Write any symptoms or questions you have... / Tulis gejala atau pertanyaan Anda..."
+                        >{{ old('notes') }}</textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        📅 <span data-en="Book Appointment" data-id="Buat Janji">Book Appointment</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Hidden success modal trigger - shown after AJAX success -->
+        </section>
+
+        <!-- ===== SUCCESS MODAL (hidden by default) ===== -->
+        <div class="form-success-overlay" id="successOverlay">
+            <div class="form-success-modal">
+                <div class="success-icon">✅</div>
+                <h3 id="successTitle" data-en="Appointment Booked!" data-id="Janji Berhasil Dibuat!">Appointment Booked!</h3>
+                <p id="successMessage" data-en="Your appointment request has been received successfully. We will contact you within 24 hours to confirm." data-id="Permintaan janji Anda telah berhasil diterima. Kami akan menghubungi Anda dalam 24 jam untuk konfirmasi.">Your appointment request has been received successfully. We will contact you within 24 hours to confirm.</p>
+
+                <div class="appointment-details" id="appointmentDetails">
+                    <div class="detail-row">
+                        <span class="detail-label" data-en="Patient" data-id="Pasien">Patient</span>
+                        <span class="detail-value" id="detailName">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label" data-en="Date" data-id="Tanggal">Date</span>
+                        <span class="detail-value" id="detailDate">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label" data-en="Time" data-id="Waktu">Time</span>
+                        <span class="detail-value" id="detailTime">—</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label" data-en="Type" data-id="Jenis">Type</span>
+                        <span class="detail-value" id="detailType">—</span>
+                    </div>
+                </div>
+
+                <button class="btn-close-success" onclick="closeSuccessModal()" data-en="Got it!" data-id="Mengerti!">Got it!</button>
+                <br>
+                {{-- <a href="{{ route('appointment.index') }}" class="btn-view-appointments" data-en="View All Appointments" data-id="Lihat Semua Janji">📋 View All Appointments</a> --}}
+            </div>
+        </div>
+
+        <!-- ===== DISCLAIMER ===== -->
+        <div class="disclaimer">
+            <p data-en="<strong>Disclaimer:</strong> This guide provides general information only and is not a substitute for professional medical advice. Always follow your dentist's specific post-operative instructions." data-id="<strong>Penafian:</strong> Panduan ini hanya memberikan informasi umum dan bukan pengganti nasihat medis profesional. Selalu ikuti instruksi pasca-operasi spesifik dari dokter gigi Anda."><strong>Disclaimer:</strong> This guide provides general information only and is not a substitute for professional medical advice. Always follow your dentist's specific post-operative instructions.</p>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p data-en="© 2026 Dental Implant Care Center. All rights reserved." data-id="© 2026 Pusat Perawatan Implan Gigi. Hak cipta dilindungi.">© 2026 Dental Implant Care Center. All rights reserved.</p>
+        <div class="sources">
+            <p data-en="Sources: American Dental Association (ADA) — Post-Operative Instructions; American Association of Oral and Maxillofacial Surgeons (AAOMS) — Dental Implant Care Guidelines; International Congress of Oral Implantologists (ICOI) — Patient Education Materials; National Institute of Dental and Craniofacial Research (NIDCR)." data-id="Sumber: American Dental Association (ADA) — Instruksi Pasca-Operasi; American Association of Oral and Maxillofacial Surgeons (AAOMS) — Pedoman Perawatan Implan Gigi; International Congress of Oral Implantologists (ICOI) — Materi Edukasi Pasien; National Institute of Dental and Craniofacial Research (NIDCR).">Sources: American Dental Association (ADA) — Post-Operative Instructions; American Association of Oral and Maxillofacial Surgeons (AAOMS) — Dental Implant Care Guidelines; International Congress of Oral Implantologists (ICOI) — Patient Education Materials; National Institute of Dental and Craniofacial Research (NIDCR).</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== LANGUAGE MANAGEMENT =====
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+            document.getElementById('btnId').classList.toggle('active', lang === 'id');
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const enText = el.getAttribute('data-en');
+                const idText = el.getAttribute('data-id') || enText;
+                const newText = lang === 'en' ? enText : idText;
+
+                if (el.tagName === 'INPUT' && (el.type === 'text' || el.type === 'email' || el.type === 'tel' ||
+                        el.type === 'date')) {
+                    el.placeholder = newText;
+                } else if (el.tagName === 'OPTION') {
+                    el.textContent = newText;
+                } else if (el.classList.contains('medication-note') || el.closest('.medication-note') || el
+                    .classList.contains('disclaimer') || el.closest('.disclaimer')) {
+                    if (el.querySelector('strong') || el.innerHTML.includes('<strong>')) {
+                        el.innerHTML = newText;
+                    } else {
+                        el.textContent = newText;
+                    }
+                } else {
+                    el.textContent = newText;
+                }
+            });
+
+            document.querySelectorAll('select option[data-en]').forEach(el => {
+                const enText = el.getAttribute('data-en');
+                const idText = el.getAttribute('data-id') || enText;
+                el.textContent = lang === 'en' ? enText : idText;
+            });
+
+            document.title = lang === 'en' ?
+                'Post-Dental Implant Care Guide | Panduan Perawatan Pasca Implan Gigi' :
+                'Panduan Perawatan Pasca Implan Gigi | Post-Dental Implant Care Guide';
+
+            const startBtn = document.getElementById('startTimerBtn');
+            if (startBtn) {
+                startBtn.textContent = lang === 'en' ? 'Start 15 min' : 'Mulai 15 menit';
+            }
+            const resetBtn = document.getElementById('resetTimerBtn');
+            if (resetBtn) {
+                resetBtn.textContent = lang === 'en' ? 'Reset' : 'Atur Ulang';
+            }
+
+            updateProgressSummary();
+            localStorage.setItem('implant-guide-lang', lang);
+        }
+
+        // ===== NAVIGATION TABS =====
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const targetId = this.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updateActiveTab, 100);
+        });
+
+        function updateActiveTab() {
+            const sections = ['immediate', 'recovery', 'week1', 'longterm', 'dosdonts', 'warnings',
+                'interactive', 'appointment'
+            ];
+            let currentSection = sections[0];
+            for (const id of sections) {
+                const el = document.getElementById(id);
+                if (el && el.getBoundingClientRect().top <= 180) {
+                    currentSection = id;
+                }
+            }
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.getAttribute('data-target') === currentSection);
+            });
+        }
+
+        // ===== PROGRESS TRACKER =====
+        const progressCheckboxes = document.querySelectorAll('.progress-item input[type="checkbox"]');
+        const progressSummary = document.getElementById('progressSummary');
+        const progressBarFill = document.getElementById('progressBarFill');
+
+        function updateProgressSummary() {
+            const total = progressCheckboxes.length;
+            const completed = Array.from(progressCheckboxes).filter(cb => cb.checked).length;
+            const label = currentLang === 'en' ? 'completed' : 'selesai';
+            progressSummary.textContent = `${completed}/${total} ${label}`;
+            const percentage = total > 0 ? (completed / total) * 100 : 0;
+            progressBarFill.style.width = percentage + '%';
+            progressCheckboxes.forEach(cb => {
+                cb.closest('.progress-item').classList.toggle('completed', cb.checked);
+            });
+            const state = Array.from(progressCheckboxes).map(cb => cb.checked);
+            localStorage.setItem('implant-progress', JSON.stringify(state));
+        }
+
+        progressCheckboxes.forEach(cb => {
+            cb.addEventListener('change', updateProgressSummary);
+        });
+
+        function loadProgress() {
+            const saved = localStorage.getItem('implant-progress');
+            if (saved) {
+                try {
+                    const state = JSON.parse(saved);
+                    progressCheckboxes.forEach((cb, index) => {
+                        if (index < state.length) cb.checked = state[index];
+                    });
+                } catch (e) {}
+            }
+            updateProgressSummary();
+        }
+
+        // ===== SYMPTOM CHECKER =====
+        let symptomAnswers = { bleeding: null, pain: null, pus: null };
+
+        function checkSymptom(question, answer) {
+            symptomAnswers[question] = answer;
+            const btnContainer = event.target.closest('.symptom-options');
+            btnContainer.querySelectorAll('.symptom-btn').forEach(btn => {
+                btn.classList.remove('selected');
+                if (btn.textContent.trim() === (answer === 'yes' ? (currentLang === 'en' ? 'Yes' :
+                        'Ya') : (currentLang === 'en' ? 'No' : 'Tidak'))) {
+                    btn.classList.add('selected');
+                }
+            });
+            if (symptomAnswers.bleeding !== null && symptomAnswers.pain !== null && symptomAnswers.pus !== null) {
+                const resultEl = document.getElementById('symptomResult');
+                const urgent = symptomAnswers.bleeding === 'yes' || symptomAnswers.pain === 'yes' || symptomAnswers
+                    .pus === 'yes';
+                resultEl.style.display = 'block';
+                resultEl.className = 'symptom-result ' + (urgent ? 'urgent' : 'ok');
+                if (urgent) {
+                    resultEl.textContent = currentLang === 'en' ?
+                        '⚠️ Please contact your dentist immediately or visit an emergency department.' :
+                        '⚠️ Mohon segera hubungi dokter gigi Anda atau kunjungi unit gawat darurat.';
+                } else {
+                    resultEl.textContent = currentLang === 'en' ?
+                        '✅ No urgent warning signs detected. Continue following your care instructions.' :
+                        '✅ Tidak ada tanda bahaya yang mendesak. Lanjutkan mengikuti instruksi perawatan Anda.';
+                }
+            }
+        }
+
+        // ===== ICE PACK TIMER =====
+        let timerInterval;
+        let timerSeconds = 15 * 60;
+        let timerRunning = false;
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timerSeconds / 60);
+            const seconds = timerSeconds % 60;
+            document.getElementById('timerDisplay').textContent =
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function startIceTimer() {
+            if (timerRunning) return;
+            if (timerSeconds <= 0) resetIceTimer();
+            timerRunning = true;
+            timerInterval = setInterval(() => {
+                timerSeconds--;
+                updateTimerDisplay();
+                if (timerSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    timerRunning = false;
+                    timerSeconds = 0;
+                    updateTimerDisplay();
+                    alert(currentLang === 'en' ? 'Time is up! Remove the ice pack for 15 minutes.' :
+                        'Waktu habis! Lepaskan kompres es selama 15 menit.');
+                }
+            }, 1000);
+        }
+
+        function resetIceTimer() {
+            clearInterval(timerInterval);
+            timerRunning = false;
+            timerSeconds = 15 * 60;
+            updateTimerDisplay();
+        }
+
+        // ===== APPOINTMENT FORM SUBMISSION (AJAX with Success Modal) =====
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const formData = new FormData(form);
+            const submitBtn = document.getElementById('submitBtn');
+
+            // Disable button to prevent double submission
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner">⏳</span> Sending...';
+
+            // Clear previous errors
+            document.querySelectorAll('.form-group.error').forEach(el => el.classList.remove('error'));
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '📅 <span data-en="Book Appointment" data-id="Buat Janji">Book Appointment</span>';
+
+                if (data.success) {
+                    // Show success modal with details
+                    showSuccessModal(formData);
+                    form.reset();
+                } else {
+                    // Handle validation errors
+                    if (data.errors) {
+                        for (const [field, messages] of Object.entries(data.errors)) {
+                            const fieldMap = {
+                                'full_name': 'fullName',
+                                'phone': 'phone',
+                                'email': 'email',
+                                'appointment_date': 'apptDate',
+                                'appointment_time': 'apptTime',
+                                'appointment_type': 'apptType'
+                            };
+                            const input = document.getElementById(fieldMap[field]);
+                            if (input) {
+                                input.closest('.form-group').classList.add('error');
+                            }
+                        }
+                        alert('Please fix the errors in the form.');
+                    } else {
+                        alert(data.message || 'An error occurred. Please try again.');
+                    }
+                }
+            })
+            .catch(error => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '📅 <span data-en="Book Appointment" data-id="Buat Janji">Book Appointment</span>';
+                console.error('Error:', error);
+                alert('Network error. Please check your connection and try again.');
+            });
+        });
+
+        // ===== SHOW SUCCESS MODAL =====
+        function showSuccessModal(formData) {
+            const overlay = document.getElementById('successOverlay');
+
+            // Get form values
+            const name = formData.get('full_name') || 'N/A';
+            const date = formData.get('appointment_date') || 'N/A';
+            const time = formData.get('appointment_time') || 'N/A';
+            const type = formData.get('appointment_type') || 'N/A';
+
+            // Format date
+            const dateObj = new Date(date + 'T00:00:00');
+            const formattedDate = dateObj.toLocaleDateString(currentLang === 'en' ? 'en-US' : 'id-ID', {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+
+            // Format time
+            const timeObj = new Date(`2000-01-01T${time}:00`);
+            const formattedTime = timeObj.toLocaleTimeString(currentLang === 'en' ? 'en-US' : 'id-ID', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            // Format type
+            const typeMap = {
+                'suture': currentLang === 'en' ? 'Suture Removal' : 'Pelepasan Jahitan',
+                'checkup': currentLang === 'en' ? 'Routine Check-up' : 'Kontrol Rutin',
+                'concern': currentLang === 'en' ? 'I Have a Concern' : 'Saya Ada Keluhan',
+                'other': currentLang === 'en' ? 'Other' : 'Lainnya'
+            };
+            const formattedType = typeMap[type] || type;
+
+            // Update modal details
+            document.getElementById('detailName').textContent = name;
+            document.getElementById('detailDate').textContent = formattedDate;
+            document.getElementById('detailTime').textContent = formattedTime;
+            document.getElementById('detailType').textContent = formattedType;
+
+            // Show modal
+            overlay.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // ===== CLOSE SUCCESS MODAL =====
+        function closeSuccessModal() {
+            const overlay = document.getElementById('successOverlay');
+            overlay.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on overlay click
+        document.getElementById('successOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuccessModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSuccessModal();
+            }
+        });
+
+        // ===== INITIALIZATION =====
+        function init() {
+            const savedLang = localStorage.getItem('implant-guide-lang');
+            if (savedLang === 'id') {
+                setLanguage('id');
+            } else {
+                setLanguage('en');
+            }
+            loadProgress();
+            updateActiveTab();
+            updateTimerDisplay();
+
+            // Set default min date for appointment
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('apptDate').setAttribute('min', today);
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+        if (document.readyState !== 'loading') {
+            init();
+        }
+    </script>
+</body>
+</html>
