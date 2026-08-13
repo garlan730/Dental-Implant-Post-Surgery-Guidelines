@@ -1,9 +1,10 @@
 [phases.setup]
-nixPkgs = ["php81", "php81Extensions.pdo_mysql"]
+nixPkgs = ["php81", "php81Extensions.pdo_mysql", "php81Extensions.mbstring", "php81Extensions.tokenizer", "php81Extensions.xml", "php81Extensions.ctype", "php81Extensions.json"]
 
 [phases.install]
 cmds = [
   "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer",
+  "chmod +x /usr/local/bin/composer",
   "composer install --no-dev --optimize-autoloader"
 ]
 
@@ -17,3 +18,6 @@ cmds = [
 
 [start]
 cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
+
+[build]
+builder = "NIXPACKS"
